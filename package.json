@@ -27,7 +27,6 @@
   "build": {
     "appId": "com.nicolas.polywavtrimmer",
     "productName": "PolyWAV Trimmer",
-    "icon": "build/icon.png",
     "directories": {
       "output": "release"
     },
