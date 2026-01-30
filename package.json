@@ -38,13 +38,13 @@
       "main": "dist/electron-main.js"
     },
     "mac": {
-      "icon": "build/icon.icns",
+      "icon": "assets/icon.icns",
       "target": [
         "dmg"
       ]
     },
     "win": {
-      "icon": "build/icon.ico",
+      "icon": "assets/icon.ico",
       "target": [
         "nsis"
       ]
