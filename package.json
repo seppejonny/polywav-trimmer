@@ -1,0 +1,57 @@
+{
+  "name": "polywav-trimmer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/cli.js",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "ui": "tsx src/server.ts",
+    "electron:dev": "npm run build && electron dist/electron-main.js",
+    "electron:pack": "electron-builder --dir",
+    "electron:dist": "electron-builder",
+    "build": "tsc",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Trim channels from PolyWAV/BWF while preserving bext and iXML",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "electron": "^32.2.0",
+    "electron-builder": "^24.13.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "build": {
+    "appId": "com.nicolas.polywavtrimmer",
+    "productName": "PolyWAV Trimmer",
+    "icon": "build/icon.png",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "package.json",
+      "dist/**/*.js"
+    ],
+    "extraMetadata": {
+      "main": "dist/electron-main.js"
+    },
+    "mac": {
+      "icon": "build/icon.icns",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.3.3"
+  }
+}
