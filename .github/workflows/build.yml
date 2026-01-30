@@ -30,7 +30,7 @@ jobs:
         run: npm run build
 
       - name: Package app
-        run: npm run electron:dist
+        run: npm run electron:dist -- --publish=never
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
